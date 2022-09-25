@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>cn.gk.gmblog</groupId>
+    <artifactId>gm-blog-adm-service</artifactId>
+    <version>v0.0.1</version>
+    <name>gm-blog-adm-service</name>
+    <description>极客先生博客-管理平台微服务</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--
+			Spring cloud netflix eureka client，微服务注册中心客户端
+			Maven仓库：https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client/3.1.3
+			官方主页：https://spring.io/projects/spring-cloud-netflix#overview
+			官方文档：https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/#service-discovery-eureka-clients
+		-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+
+        <!--
+			Druid数据库链接池，Druid专门为Springboot提供，帮助你更简单的配置Druid
+			Maven仓库：https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter
+			官方文档：https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter
+			官方主页：https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5
+		-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <!--
+			Mysql JDBC 4 驱动器
+			Maven仓库：https://mvnrepository.com/artifact/mysql/mysql-connector-java
+			官方文档：https://dev.mysql.com/doc/connector-j/8.0/en/
+			官方主页：https://dev.mysql.com/doc/
+		-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+        </dependency>
+
+        <!--
+			Spring JDBC操作包
+			Maven仓库：https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+			官方文档：暂时没找到
+			官方主页：暂时没找到
+		-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+
+        <!--
+            gk-service-sdk，自主研发满足自己产品研发线需求
+            官方文档：暂未研发
+            官方主页：暂未研发
+        -->
+        <dependency>
+            <groupId>cn.gk</groupId>
+            <artifactId>gk-service-sdk</artifactId>
+            <version>v0.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/gk-service-sdk.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
